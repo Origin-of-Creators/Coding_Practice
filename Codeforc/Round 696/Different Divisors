@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		vector<int> div;
+		div.push_back(1);
+		int d;
+		cin >> d;
+		int res = 6;
+		while (true)
+		{
+			div.clear();
+			div.push_back(1);
+			for (long int i = 2; i <= res; i++)
+			{
+				if (res % i == 0)
+				{
+					if ((i - div.back()) >= d)
+						div.push_back(i);
+					else
+					{
+						break;
+					}
+				}
+			}
+			if (div.size() >= 4)
+			{
+				cout << res << "\n";
+				break;
+			}
+			else
+			{
+				res++;
+			}
+		}
+	}
+}
