@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int convert(char s)
+{
+	int num = 0;
+		num = num * 10 + (int(s) - 48);
+	return  num;
+}
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		int n;
+		cin >> n;
+		string a;
+		string b;
+		cin >> b;	
+		a.push_back('1');
+		for (int i = 1; i < n; i++)
+		{
+			if (convert(b[i - 1]) + convert(a[i - 1]) == 1)
+			{
+				if (b[i] == '0')
+					//a[i] = '0';
+					a.push_back('0');
+				else
+					//a[i] = '1';
+					a.push_back('1');
+			}
+			else if (convert(b[i - 1]) + convert(a[i - 1])==0)
+			{
+				//a[i]='1';
+				a.push_back('1');
+			}
+			else if (convert(b[i - 1]) + convert(a[i - 1]) == 2)
+			{
+				if (b[i] == '0')
+					//a[i] = '1';
+					a.push_back('1');
+				else
+					//a[i] = '0';
+					a.push_back('0');
+ 
+			}
+			//cout << convert(b[i])<<"\n";
+		}
+		cout << a<<"\n";
+	}
+	cout << "\n";
+}
