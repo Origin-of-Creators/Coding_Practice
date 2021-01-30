@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long unsigned int n;
+        cin >> n;
+        int count = n / 2020;
+        int rem = n % 2020;
+        if (rem <= count)
+        {
+            cout << "Yes\n";
+        }
+        else
+        {
+            cout << "NO\n";
+        }
+ 
+    }
+}
