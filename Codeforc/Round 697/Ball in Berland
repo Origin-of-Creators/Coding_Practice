@@ -1,0 +1,56 @@
+#include <iostream>
+#include <algorithm>
+#define ll long long
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+ 
+int main() {
+	int t;
+	cin>>t;
+    while(t-->0)
+    {
+          
+      ll unsigned int x;
+		ll unsigned int y;
+		cin>>x;
+		cin>>y;
+      ll unsigned int w[x+1];
+     ll unsigned int z[y+1];
+		ll unsigned int k;
+		cin>>k;
+		ll unsigned int b[k];
+		ll unsigned int g[k];
+		fill_n(w,x+1,0);
+        fill_n(z,y+1,0);
+		for(ll int i=0;i<k;i++)
+		{
+		 cin>>b[i];
+         
+         w[b[i]]++;
+      
+		}
+        
+		for(ll int i=0;i<k;i++)
+		{
+		 cin>>g[i];
+         z[g[i]]++;
+		}
+		ll int count=0;
+       ll unsigned int m=k;
+		for(ll int i=0;i<k;i++,m--)
+		{
+            w[b[i]]--;
+            z[g[i]]--;
+			ll unsigned int temp=m-w[b[i]]-z[g[i]]-1;
+           // cout<<b[i]<<" "<< g[i]<<" "<<temp<<endl;
+            if(temp>=1)
+			count+=temp;
+            
+		}
+		cout<<count<<endl;	 
+		
+        
+        
+    }
+	return 0;
+}
