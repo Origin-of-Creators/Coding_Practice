@@ -1,0 +1,50 @@
+#include<string.h>
+#include<iostream>
+#include<vector>
+#include<math.h>
+#include<algorithm>
+#define lli long long  int
+#define f for
+using namespace std;
+const lli val=100000;
+  lli a[val];
+    lli b[val];
+void func(lli A,lli B,lli n)
+{
+  
+    f(lli i=0; i<n;i++)
+    {
+  scanf("%lld",&a[i]);
+    }
+   lli maxi=0;
+    for(lli i=0; i<n;i++)
+    {
+    scanf("%lld",&b[i]);
+    lli n=b[i]/A;
+    n=b[i]%A==0?n:n+1;
+    B-=a[i]*n;
+    maxi=max(maxi,a[i]);
+    //cout<<B<<" " <<endl;
+    
+    
+    }
+   if(B+maxi>0)
+   {
+        puts("YES");
+    return;
+   }
+
+puts("NO");
+}
+int main()
+{
+    lli t;
+    cin>>t;
+    while(t-->0)
+    {
+        lli A,B,n;
+        cin>>A>>B>>n;
+        func(A,B,n);
+    }
+    return 0;
+}
