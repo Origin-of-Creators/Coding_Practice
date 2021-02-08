@@ -1,0 +1,40 @@
+#include<iostream>
+#include<vector>
+#include<queue>
+#include<algorithm>
+#define lli long long  int
+#define f for
+using namespace std;
+
+int main()
+{
+    lli t;
+    cin>>t;
+    string s;
+    while(t-->0)
+    {
+   cin>>s;
+   lli turn=1;
+   f(lli i=0;i<s.size();i++)
+   {
+  char c=s.at(i);
+  if(turn%2)
+  {
+  if(c=='a')
+  s[i]='b';
+  else
+  s[i]='a';
+  }
+  else
+  {
+     if(c=='z')
+  s[i]='y';
+  else
+  s[i]='z'; 
+  }
+turn++;
+   }
+  cout<<s<<endl;
+    }
+    return 0;
+}
