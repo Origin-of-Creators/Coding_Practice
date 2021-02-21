@@ -4,38 +4,25 @@ using namespace std;
 
 
 // Complete the timeConversion function only
-string timeConversion(string s) {
-      
-     string res="";
-     if(s[8]=='P')
-     {
-        if(s[0]=='1'&&s[1]=='2')
-        {
-            for(int i=0;i<8;i++)
-                res+=s[i];
-        }
-        else
-        {
-            int temp=stoi(s);       //stoi function- To convert string to integer(Check it out)
-            temp+=12;
-            res=to_string(temp);
-            for(int i=2;i<8;i++)
-                res+=s[i];
-        }
-     }
-     else if(s[8]=='A'&&s[0]=='1'&&s[1]=='2')
-     {
-        res='0';
-        res+='0';
-        for(int i=2;i<8;i++)
-            res+=s[i];
-     }
-    else
+string timeConversion(string s) 
+{
+    string hours= s.substr(0,2);
+    int hour=stoi(hours);
+    size_t pos=s.find("PM");
+    if(pos!=string::npos)
     {
-        for(int i=0;i<8;i++)
-            res+=s[i];
+        if(hour+12<24)
+        {
+            hours=to_string(hour+12);
+        }
     }
-     return res;
+    else 
+        if(hour==12)
+        {
+            hours="00";
+        }
+    
+    return s.replace(0,2,hours).erase(s.size()-2);
 }
 
     //Upto here
