@@ -14,8 +14,8 @@ int main()
     {
         ll c;
         cin >> c;
-        ll d = ceil(log2(c));
-        ll d2 = pow(2, d);
+        //ll d = ceil(log2(c));
+        //ll d2 = pow(2, d);
         string str = bitset<64>(c).to_string();
         ll index = 0;
         for (ll i = 0; i < 64; i++)
