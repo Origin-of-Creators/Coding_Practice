@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+typedef long long int ll;
+using namespace std;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        int guess;
+        ll square;
+        ll number = ceil(sqrt(1)); 
+        ll n2 = number * number; 
+        number = (number * 2) + 1; 
+        while ((n2 >= 1 && n2 <= 1000000)) 
+        {
+            cout<<n2<<endl;
+            cin>>guess;
+            if(guess==1)
+                break;
+            n2 = n2 + number;
+            number += 2; 
+        } 
+    }
+}
