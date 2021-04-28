@@ -5,4 +5,4 @@ Here you can find the important coding questions solutions of different sites
 * Codeforces
 * Geeksforgeeks
 
-Anyone can submit their solution here, make sure name of your file is the question title.
+**Anyone can submit their solution here, make sure name of your file is the question title and at the top of the file put the link of the question.**
