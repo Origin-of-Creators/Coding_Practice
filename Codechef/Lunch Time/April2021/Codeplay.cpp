@@ -1,3 +1,4 @@
+// Link to question
 // https://www.codechef.com/LTIME95C/problems/SLOOP
 #include <iostream>
 using namespace std;
