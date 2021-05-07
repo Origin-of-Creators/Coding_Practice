@@ -1,11 +1,8 @@
-//Link to question
-//https://www.codechef.com/LTIME95C/problems/ARRROT
-
 #include <iostream>
 using namespace std;
 
-int main() {
-	// your code goes here
+int main() 
+{
 	long long int n;
 	cin >> n;
 	long long int a[n],sum=0;
